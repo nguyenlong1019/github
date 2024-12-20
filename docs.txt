@@ -1,0 +1,82 @@
+Làm việc với github trên window 
+
+Tạo repository 
+git init 
+git add file or ...
+git config user.name "username"
+git config user.email "email@gmail.com"
+git commit -m "Commit message"
+git branch -M main (đổi tên nhánh master thành main)
+git remote add origin url_repo 
+git push -u origin main 
+
+Làm việc với github trên Ubuntu 
+Cần có github token or ssh 
+
+Để thêm ssh, gen ssh key tại máy local -> sau đó add public key vào new ssh key trong github 
+(Login -> settings -> SSH and GPG Keys -> new SSH key)
+
+Hoặc sử dụng token: token_key
+Ví dụ token: token_key 
+
+git remote set-url origin https://nguyenlong1019:token_key@github.com/nguyenlong1019/repo_name.git 
+
+git branch (kiểm tra các nhánh)
+
+Switch nhánh: 
+git checkout branch_name 
+ex: git checkout development 
+
+Tạo nhánh: 
+git checkout -b new_branch_name  
+
+Kiểm tra log commit:
+git log 
+Quit log: q
+
+Kiểm tra status staging area:
+git status 
+
+Lưu thay đổi tạm thời: git stash 
+
+Clone code ở một nhánh về:
+git clone -b branch_name url_repo 
+
+set url trên git clone về:
+git remote set-url origin https://username:token_key@github.com/username/repo_name.git 
+
+git remote set-url origin https://pn-arch-1019:token_key@github.com/pn-arch-1019/sowinstyle.git
+git remote add origin https://pn-arch-1019:token_key@github.com/pn-arch-1019/sowinstyle.git
+
+Pull code về từ nhánh development:
+git remote set-url origin https://pn-arch-1019:token_key@github.com/pn-arch-1019/sowinstyle.git
+git pull origin development
+
+
+Cập nhật thông tin từ remote 
+git fetch origin 
+
+Kiểm tra các nhánh của remote fetch về:
+git branch -r 
+
+Ví dụ kết quả sẽ ra như sau:
+origin/development
+origin/main 
+
+Tạo nhánh từ remote origin:
+git checkout -b main origin/main
+
+git pull origin main (pull code từ origin/main về)
+
+Merge nhánh:
+git merge branch_name 
+
+Nếu không xung đột, git tự động hoàn tất merge 
+Nếu có xung đột, giải quyết xung đột và commit 
+
+git add .
+git commit -m "Resolve merge conflicts between main and development"
+
+
+
+
