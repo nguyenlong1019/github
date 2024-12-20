@@ -78,5 +78,42 @@ git add .
 git commit -m "Resolve merge conflicts between main and development"
 
 
+Sau khi clone một project -> set-url origin -> commit -> push 
+
+Quy ước commit message: 
+commit message: độ dài tối đa 50 ký tự, viết ở thì hiện tại (ví dụ: Add feature)
+
+Syntax: <type>(<scope>): <short summary>
+
+Các loại type phổ biến:
+feat: Thêm một tính năng mới 
+fix: Sửa lỗi 
+docs: Thay đổi hoặc cập nhật tài liệu 
+style: Thay đổi không ảnh hưởng đến logic (format code, chỉnh sửa khoảng trắng, ...)
+refactor: Thay đổi code nhưng không thêm tính năng hoặc sửa lỗi 
+perf: Tối ưu hiệu năng 
+test: Thêm hoặc sửa đổi test case 
+build: Thay đổi liên quan đến build system hoặc dependencies 
+ci: Thay đổi liên quan đến CI/CD 
+chore: Công việc lặt vặt không ảnh hưởng đến production code 
+revert: Hoàn tác một commit  trước đó 
+
+Ex: Thêm tính năng:
+feat(auth): add login with Google OAuth
+
+Ex: Sửa lỗi:
+fix(cart): correct total price calculation
+
+Ex: Cập nhật tài liệu:
+docs(README): add setup instructions for Docker
+
+Ex: Refactor: 
+refactor(utils): simplify date parsing logic
+
+Breaking change:
+feat(api): update endpoint to v2
+
+BREAKING CHANGE: endpoint `/api/v1/users` has been replaced by `/api/v2/users`.
+
 
 
